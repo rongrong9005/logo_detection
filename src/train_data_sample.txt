@@ -1,0 +1,2 @@
+path_to_file1.jpg xmin,ymin,xmax,ymax,class_id xmin,ymin,xmax,ymax,class_id
+path_to_file2.jpg xmin,ymin,xmax,ymax,class_id
