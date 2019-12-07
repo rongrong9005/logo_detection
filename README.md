@@ -22,4 +22,27 @@ given in Keras-application, so we only need to download from
 Keras without output layer. If the memory of test GPU is not
 enough, because the size of NASNetLarge is 343 MB, you can
 choose NASNetMobile from Keras-application which only
-has 23 MB.
+has 23 MB. Thus, in our project, we use NASNetMobile. 
+Otherwise, using NASNetLarge is also acceptable. You only
+need to change two places: in "utils.py" file, in "load_extractor_model"
+method, change import application "NASNetMobile" to "NASNetLarge.
+Same as "litw_features.py" file. Notice that the input shape in NASNetLarge
+is 331x331.
+
+
+# Running for testing model
+Here is three ways:
+
+1. python logohunter.py  --image --input_brands ../data/test/test_brands/test_lexus.png \
+                              --input_images ../data/test/lexus/ \
+                              --output ../data/test/test_lexus --outtxt
+
+2. python logohunter.py  --image --input_brands ../data/test/test_brands/test_golden_state.jpg  \
+                              --input_images ../data/test/goldenstate/  \
+                              --output ../data/test/test_gs --outtxt
+
+3. python logohunter.py  --image --input_images data_test.txt  \
+                              --input_brands ../data/test/test_brands/test_lexus.png  \
+                              --outtxt --no_save_img
+
+
